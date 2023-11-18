@@ -160,8 +160,6 @@ filtered_df = get_filtered_gov(data_gov, filterlist_s)
 
 #filtered_df = filtered_df.style.format({'link': make_clickable})
 
-pandas.filtered_df.to_html(columns='link')
-
 # Process Data
 
 st.write("Here are the forum posts that affect your portfolio")
