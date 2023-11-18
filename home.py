@@ -6,7 +6,7 @@ from PIL import Image
 st.set_page_config(page_title='DAO ', page_icon= '👻', layout='wide')
 
 # Title
-st.title('Governance Forum monitoring tool')
+st.title('Governance Forum Monitoring Tool')
 
 # Content
 c1, c2 = st.columns(2)
