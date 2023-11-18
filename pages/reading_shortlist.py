@@ -143,10 +143,6 @@ def get_filtered_gov(data_gov, filterlist_s):
 
     return filtered_df
 
-data = [dict(name='Google', url='http://www.google.com'),
-        dict(name='Stackoverflow', url='http://stackoverflow.com')]
-df = pd.DataFrame(data)
-
 def make_clickable(val):
     # target _blank to open new window
     return '<a target="_blank" href="{}">{}</a>'.format(val, val)
