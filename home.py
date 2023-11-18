@@ -10,7 +10,10 @@ st.title('Governance Forum monitoring tool')
 
 # Content
 c1 = st.columns(1)
-c1.image(Image.open('images/aave.png'))
+
+with Image.open(file_path) as img:
+
+    c1.image(img)
 
 
 st.write(
