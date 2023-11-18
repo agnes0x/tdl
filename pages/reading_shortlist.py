@@ -9,7 +9,7 @@ import time
 #Local variables (for querying!)
 
 # Config
-st.set_page_config(page_title='Tldr: gov posts', page_icon='🔍', layout='wide')
+st.set_page_config(page_title='Important gov posts', page_icon='👀', layout='wide')
 
 # Style
 with open('style.css')as f:
