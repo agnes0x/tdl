@@ -143,9 +143,9 @@ def get_filtered_gov(data_gov, filterlist_s):
 
     return filtered_df
 
-def make_clickable(val):
+#def make_clickable(val):
     # target _blank to open new window
-    return f'<a target="_blank" href="{val}">{val}</a>'
+    #return f'<a target="_blank" href="{val}">{val}</a>'
 
 
 
@@ -158,7 +158,9 @@ filterlist_s = get_data_wallet(address)
 
 filtered_df = get_filtered_gov(data_gov, filterlist_s)
 
-filtered_df = filtered_df.style.format({'link': make_clickable})
+#filtered_df = filtered_df.style.format({'link': make_clickable})
+
+pandas.filtered_df.to_html(columns='link')
 
 # Process Data
 
