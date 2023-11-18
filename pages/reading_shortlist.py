@@ -144,6 +144,8 @@ def get_filtered_gov(data_gov, filterlist_s):
     return filtered_df
 
 # Data Sources
+st.write("Please remain patient")
+
 data_gov = get_data_governance()
 
 filterlist_s = get_data_wallet(address)
@@ -155,4 +157,9 @@ filtered_df = get_filtered_gov(data_gov, filterlist_s)
 st.write("Here are the forum posts that affect your portfolio")
 
 st.write(filtered_df)
+
+st.write("test")
+
+st.write(filtered_df.to_html(escape=False), unsafe_allow_html=True)
+
 
