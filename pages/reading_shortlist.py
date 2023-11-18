@@ -143,6 +143,16 @@ def get_filtered_gov(data_gov, filterlist_s):
 
     return filtered_df
 
+data = [dict(name='Google', url='http://www.google.com'),
+        dict(name='Stackoverflow', url='http://stackoverflow.com')]
+df = pd.DataFrame(data)
+
+def make_clickable(val):
+    # target _blank to open new window
+    return '<a target="_blank" href="{}">{}</a>'.format(val, val)
+
+
+
 # Data Sources
 st.write("Please remain patient")
 
@@ -152,14 +162,14 @@ filterlist_s = get_data_wallet(address)
 
 filtered_df = get_filtered_gov(data_gov, filterlist_s)
 
+filtered_df.style.format({'link': make_clickable})
+
 # Process Data
 
 st.write("Here are the forum posts that affect your portfolio")
 
 st.write(filtered_df)
 
-st.write("test")
 
-st.write(filtered_df.to_html(escape=False), unsafe_allow_html=True)
 
 
