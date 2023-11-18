@@ -9,11 +9,11 @@ st.set_page_config(page_title='DAO ', page_icon=':bar_chart:', layout='wide')
 st.title('Governance Forum monitoring tool')
 
 # Content
-c1 = st.columns(1)
+c1, c2 = st.columns(2)
+c1.image(Image.open('images/aave2.png'))
 
-with Image.open(file_path) as img:
-
-    c1.image(img)
+#with Image.open(file_path) as img:
+#   c1.image(img)
 
 
 st.write(
