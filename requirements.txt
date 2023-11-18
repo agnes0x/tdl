@@ -4,4 +4,4 @@ altair
 plotly.express
 streamlit
 requests
-langchain
+langchain[all]
