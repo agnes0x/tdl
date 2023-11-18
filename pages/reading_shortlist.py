@@ -9,13 +9,13 @@ import time
 #Local variables (for querying!)
 
 # Config
-st.set_page_config(page_title='Important gov posts', page_icon='👀', layout='wide')
+st.set_page_config(page_title='Shortlist gov posts', page_icon='👀', layout='wide')
 
 # Style
 with open('style.css')as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
-st.header("Tldr: governance posts affecting you! ")
+st.header("Shortlist of governance posts affecting you! ")
 
 address = st.text_input("Please enter your address & press enter", value="0xE831C8903de820137c13681E78A5780afDdf7697", max_chars=42 )
 
