@@ -3,7 +3,7 @@ import streamlit as st
 from PIL import Image
 
 # Confit
-st.set_page_config(page_title='DAO ', page_icon=':bar_chart:', layout='wide')
+st.set_page_config(page_title='DAO ', page_icon= '👻', layout='wide')
 
 # Title
 st.title('Governance Forum monitoring tool')
