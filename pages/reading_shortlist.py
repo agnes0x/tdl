@@ -145,7 +145,7 @@ def get_filtered_gov(data_gov, filterlist_s):
 
 def make_clickable(val):
     # target _blank to open new window
-    return '<a target="_blank" href="{}">{}</a>'.format(val, val)
+    return f'<a target="_blank" href="{val}">{val}</a>'
 
 
 
