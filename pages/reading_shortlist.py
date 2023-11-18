@@ -17,7 +17,7 @@ with open('style.css')as f:
 
 st.header("Tldr: governance posts affecting you! ")
 
-address = st.text_input("Please enter your address:", value="0xE831C8903de820137c13681E78A5780afDdf7697", max_chars=42 )
+address = st.text_input("Please enter your address & press enter", value="0xE831C8903de820137c13681E78A5780afDdf7697", max_chars=42 )
 
 #-----------------------------------------
 # Global Variables (keep template clean, no changes beyond this point)!
@@ -90,9 +90,8 @@ def get_data_governance():
 #ideally would call zerion or zapper api to get current token balances & wallet positions, but sadly haven't got an api key on hand :(
 #placeholder version with etherscan
 
-def get_data_wallet():
+def get_data_wallet(address):
     # Set wallet address
-    address= '0xE831C8903de820137c13681E78A5780afDdf7697'
 
     # Etherscan api url
     url1 = 'https://api.etherscan.io/api?module=account&action=tokentx&address='
