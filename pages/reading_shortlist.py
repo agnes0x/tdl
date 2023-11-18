@@ -158,7 +158,7 @@ filterlist_s = get_data_wallet(address)
 
 filtered_df = get_filtered_gov(data_gov, filterlist_s)
 
-filtered_df.style.format({'link': make_clickable})
+filtered_df = filtered_df.style.format({'link': make_clickable})
 
 # Process Data
 
