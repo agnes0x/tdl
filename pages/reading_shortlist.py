@@ -138,7 +138,7 @@ def get_data_wallet(address):
 # Filter DataFrame based on whether the value in filterlist is also in column_name
 def get_filtered_gov(data_gov, filterlist_s):
 
-    filtered_df = data[data['title'].apply(lambda title: any(word in title for word in filterlist_s))]
+    filtered_df = data_gov[data_gov['title'].apply(lambda title: any(word in title for word in filterlist_s))]
     #filtered_df = data[data['title'].apply(lambda title: any(word == title for word in filterlist_s))]
 
     return filtered_df
