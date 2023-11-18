@@ -11,13 +11,13 @@ import time
 #Local variables (for querying!)
 
 # Config
-st.set_page_config(page_title='Tldr: the governance posts affecting you!', page_icon='🔍', layout='wide')
+st.set_page_config(page_title='Tldr: gov posts', page_icon='🔍', layout='wide')
 
 # Style
 with open('style.css')as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
-st.header("Please enter your address, we'll fetch governance forums relevant to your holdings ")
+st.header("Tldr: governance posts affecting you! ")
 
 address = st.text_input("Please enter your address:", value="0xE831C8903de820137c13681E78A5780afDdf7697", max_chars=42 )
 
