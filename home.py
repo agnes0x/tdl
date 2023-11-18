@@ -10,7 +10,7 @@ st.title('Governance Forum monitoring tool')
 
 # Content
 c1, c2 = st.columns(2)
-c1.image(Image.open('images/aave2.png'))
+c1.image(Image.open('images/aave3.png'))
 
 #with Image.open(file_path) as img:
 #   c1.image(img)
