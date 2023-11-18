@@ -1,0 +1,74 @@
+import pandas
+import numpy
+import requests
+import datetime
+import time
+
+#######################################
+#TOC
+# 1. get gov posts
+# 2. get wallet positions
+# 3. filter
+# 4. chatgpt explain
+# 5. match delegate
+#######################################
+
+
+#######################################
+# 1. get gov posts
+#######################################
+
+# base URL
+base_url = "https://governance.aave.com/c/governance/4/l/latest.json?filter=default&page="
+
+#Page count 
+page_count = 1
+
+query = base_url + page_count
+
+#df to hold data 
+#response = requests.get(query).json()
+
+#list to hold data
+data = []
+
+# Infinite loop, will break when no next page is available
+while True:
+    
+    # Construct the URL for the current page
+    query = f"{base_url}{page_count}"
+
+    # Send a request to the current URL
+    response = requests.get(query)
+    
+    # Check if the response is successful
+    if response.status_code == 200:
+           
+        # Process and add the data to the list
+        df = requests.get(query).json()
+        data.extend(df["topic_list"]["topics"])
+        
+        # Check if there is a next page
+        # Assuming the next page URL or indicator is in a field called 'nextPage'
+        if not df["topic_list"]["more_topics_url"]:
+            break
+        
+        # Increment the page count for the next iteration
+        page_count += 1
+        
+        #rate limit
+        time.sleep(2)
+        
+    else:
+        print(f"Failed to fetch data from {url}")
+        break
+
+# Convert the list to a DataFrame
+df2 = pandas.json_normalize(data)
+
+# Complete slug urls
+topic_url = "https://governance.aave.com/t/"
+df2['link'] = topic_url + df2['slug']
+
+# Save the DataFrame to a file
+df2.to_csv('govforum_data.csv', index=False)
