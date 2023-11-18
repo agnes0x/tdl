@@ -17,7 +17,7 @@ address = st.text_input("Please enter your address:", value="0xE831C8903de820137
 theme_plotly = None # None or streamlit
 
 # Config
-st.set_page_config(page_title='Tldr: the governance posts affecting you!', page_icon=':🔍:', layout='wide')
+st.set_page_config(page_title='Tldr: the governance posts affecting you!', page_icon='🔍', layout='wide')
 
 # Style
 with open('style.css')as f:
