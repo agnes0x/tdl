@@ -4,7 +4,13 @@ from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.memory.chat_message_histories import StreamlitChatMessageHistory
 from langchain.tools import DuckDuckGoSearchRun
+from langchain.chains import LLMChain
 import streamlit as st
+from langchain.prompts import PromptTemplate
+from decouple import config
+from langchain.memory import ConversationBufferWindowMemory
+
+
 
 st.set_page_config(page_title="tldr: explain governance post", page_icon="🤔")
 st.title("🤔 tldr: explain & summarize governance post")
