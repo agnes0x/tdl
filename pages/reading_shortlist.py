@@ -141,7 +141,7 @@ def get_filtered_gov(data_gov, filterlist_s):
     filtered_df = data[data['title'].apply(lambda title: any(word in title for word in filterlist_s))]
     #filtered_df = data[data['title'].apply(lambda title: any(word == title for word in filterlist_s))]
 
-return filtered_df
+    return filtered_df
 
 # Data Sources
 data_gov = get_data_governance()
