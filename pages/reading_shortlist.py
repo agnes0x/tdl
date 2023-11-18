@@ -9,7 +9,7 @@ import plotly.io as pio
 #Local variables (for querying!)
 
 # Config
-st.set_page_config(page_title='Tldr: the governance posts affecting you!', page_icon=':bar_chart:', layout='wide')
+st.set_page_config(page_title='Tldr: the governance posts affecting you!', page_icon='🔍', layout='wide')
 
 # Style
 with open('style.css')as f:
