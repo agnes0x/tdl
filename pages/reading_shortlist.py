@@ -8,6 +8,13 @@ import plotly.io as pio
 
 #Local variables (for querying!)
 
+# Config
+st.set_page_config(page_title='Tldr: the governance posts affecting you!', page_icon=':bar_chart:', layout='wide')
+
+# Style
+with open('style.css')as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+
 st.header("Please enter your address, we'll fetch governance forums relevant to your holdings ")
 
 address = st.text_input("Please enter your address:", value="0xE831C8903de820137c13681E78A5780afDdf7697", max_chars=42 )
@@ -16,12 +23,6 @@ address = st.text_input("Please enter your address:", value="0xE831C8903de820137
 # Global Variables (keep template clean, no changes beyond this point)!
 theme_plotly = None # None or streamlit
 
-# Config
-st.set_page_config(page_title='Tldr: the governance posts affecting you!', page_icon=':bar_chart:', layout='wide')
-
-# Style
-with open('style.css')as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 # Data functions
 def get_data_governance():
