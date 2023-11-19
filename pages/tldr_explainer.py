@@ -29,7 +29,7 @@ if prompt := st.chat_input(placeholder="Can you please summarize this article & 
     executor = AgentExecutor.from_agent_and_tools(
         agent=chat_agent,
         tools=tools,
-        memory=memory,
+        #memory=memory,
         return_intermediate_steps=True,
         handle_parsing_errors=True,
     )
