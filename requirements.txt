@@ -1,9 +1,12 @@
 pandas
 numpy
-altair
 plotly.express
 streamlit
 requests
 langchain==0.0.239
 openai
 duckduckgo-search
+uuid
+ibs.helper
+os.path
+voice_toolkit
