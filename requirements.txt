@@ -8,5 +8,4 @@ openai
 duckduckgo-search
 uuid
 libs
-os.path
 voice_toolkit
