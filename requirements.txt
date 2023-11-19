@@ -4,5 +4,5 @@ altair
 plotly.express
 streamlit
 requests
-langchain
+langchain==0.0.239
 openai
