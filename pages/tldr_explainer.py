@@ -7,7 +7,7 @@ from langchain.tools import DuckDuckGoSearchRun
 from langchain.chains import LLMChain
 import streamlit as st
 from langchain.prompts import PromptTemplate
-from decouple import config
+# from decouple import config
 from langchain.memory import ConversationBufferWindowMemory
 
 
