@@ -9,6 +9,7 @@ import streamlit as st
 from langchain.prompts import PromptTemplate
 # from decouple import config
 from langchain.memory import ConversationBufferWindowMemory
+import openai
 
 openai_api_key = st.secrets["my_cool_secrets"]["openai_api_key"]
 
