@@ -17,7 +17,7 @@ st.title("🤔 tldr: explain & summarize governance post")
 
 openai_api_key = "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"
 
-msgs = StreamlitChatMessageHistory()
+#msgs = StreamlitChatMessageHistory()
 memory = ConversationBufferMemory(
     chat_memory=msgs, return_messages=True, memory_key="chat_history", output_key="output"
 )
