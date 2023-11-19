@@ -10,33 +10,8 @@ from langchain.prompts import PromptTemplate
 # from decouple import config
 from langchain.memory import ConversationBufferWindowMemory
 
-
-
 st.set_page_config(page_title="tldr: explain governance post", page_icon="🤔")
 st.title("🤔 tldr: explain & summarize governance post")
-
-#openai_api_key = 
-
-#msgs = StreamlitChatMessageHistory()
-#memory = ConversationBufferMemory(
-#    chat_memory=msgs, return_messages=True, memory_key="chat_history", output_key="output"
-#)
-#if len(msgs.messages) == 0 or st.sidebar.button("Reset chat history"):
-#    msgs.clear()
-#    msgs.add_ai_message("How can I help you?")
-#    st.session_state.steps = {}
-
-avatars = {"human": "user", "ai": "assistant"}
-for idx, msg in enumerate(msgs.messages):
-    with st.chat_message(avatars[msg.type]):
-        # Render intermediate steps if any were saved
-        for step in st.session_state.steps.get(str(idx), []):
-            if step[0].tool == "_Exception":
-                continue
-            with st.status(f"**{step[0].tool}**: {step[0].tool_input}", state="complete"):
-                st.write(step[0].log)
-                st.write(step[1])
-        st.write(msg.content)
 
 if prompt := st.chat_input(placeholder="Can you please summarize this article & how it would affect me as a user: https://governance.aave.com/t/gho-depeg-and-liquidity-analysis/15250?"):
     st.chat_message("user").write(prompt)
