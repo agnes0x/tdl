@@ -98,7 +98,7 @@ def get_data_wallet(address):
 
     url2 = "&page=1&offset=1000&startblock=0&endblock=27025780&sort=asc&apikey="
 
-    api_key = 'R2SSSRDSPZN3HWMHITBIQUM3EKQE2YED9I'
+    api_key = st.secrets["my_cool_secrets"]["etherscan_api_key"]
 
     query = url1 + address + url2 + api_key 
 
