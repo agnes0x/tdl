@@ -10,6 +10,8 @@ from langchain.prompts import PromptTemplate
 # from decouple import config
 from langchain.memory import ConversationBufferWindowMemory
 
+openai_api_key = st.secrets["my_cool_secrets"]["openai_api_key"]
+
 st.set_page_config(page_title="tldr: explain governance post", page_icon="🤔")
 st.title("🤔 tldr: explain & summarize governance post")
 
