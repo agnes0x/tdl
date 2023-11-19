@@ -6,3 +6,4 @@ streamlit
 requests
 langchain==0.0.239
 openai
+duckduckgo-search
