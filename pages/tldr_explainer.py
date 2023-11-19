@@ -15,7 +15,7 @@ from langchain.memory import ConversationBufferWindowMemory
 st.set_page_config(page_title="tldr: explain governance post", page_icon="🤔")
 st.title("🤔 tldr: explain & summarize governance post")
 
-openai_api_key = 
+#openai_api_key = 
 
 #msgs = StreamlitChatMessageHistory()
 memory = ConversationBufferMemory(
