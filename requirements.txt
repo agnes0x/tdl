@@ -7,6 +7,6 @@ langchain==0.0.239
 openai
 duckduckgo-search
 uuid
-ibs.helper
+libs.helper
 os.path
 voice_toolkit
